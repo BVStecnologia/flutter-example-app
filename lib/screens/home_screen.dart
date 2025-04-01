@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../models/counter_model.dart';
 import '../widgets/counter_display.dart';
 import '../widgets/counter_controls.dart';
+import '../widgets/theme_toggle.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,6 +14,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Counter Example'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        actions: const [
+          // Adicionando o botão de alternar tema na barra de navegação
+          ThemeToggle(),
+        ],
       ),
       body: Center(
         child: Column(
